@@ -1,3 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'AvengeanceMightiestAvenger';
   src: url('fonts/AVENGEANCE_MIGHTIEST_AVENGER_RUS_0.ttf') format('truetype');
@@ -13,22 +24,41 @@ body {
   background-color: rgba(0, 0, 0, 0.781);
   color: #333;
   text-align: center;
-  margin: 20px;
   background-image: url(./jpg/background.jpg);
 }
-/* @media screen and (max-width: 479px) {
-  .block-all {
-    width: 380px;
+/*  */
+.optimus {
+  width: 100%;
+  height: 100%;
+  margin-top: -50px;
+  background-color: #000000d8;
+  position: absolute;
+  z-index: 1;
+}
+
+/*  */
+@media screen and (max-width: 479px) {
+  .optimus-img {
+    margin-top: 50px;
+    height: 50%;
   }
-} */
+}
 @media screen and (min-width: 480px) {
   .block-all {
     width: 400px;
+  }
+  .optimus-img {
+    margin-top: 50px;
+    height: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
   .block-all {
     width: 800px;
+  }
+  .optimus-img {
+    margin-top: 50px;
+    height: 90%;
   }
 }
 .block-all {
@@ -86,7 +116,12 @@ h2 {
   color: #dc3545;
   font-weight: bold;
 }
-
+#feedback-image {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  /* width: 600px; */
+}
 #watchCartoonBtn {
   display: none;
 }
@@ -96,4 +131,3 @@ h2 {
   color: #fff;
   font-weight: bold;
 }
-/*  */

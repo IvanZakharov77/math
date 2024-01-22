@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="optimus" class="optimus">
+      <img class="optimus-img" src="./jpg/optimus.png" alt="" />
+    </div>
     <div class="block-all">
       <h1>Выберите Математическую Операцию</h1>
       <label for="operation">Выберите операцию:</label>
@@ -113,7 +116,22 @@
           // Показываем кнопку "Смотреть случайный мультфильм" при правильном ответе
           document.getElementById('watchCartoonBtn').style.display = 'block';
         } else {
-          feedback.innerText = 'Неверно. Попробуйте еще раз.';
+          // Очищаем содержимое feedback перед добавлением изображения
+          var feedback = document.getElementById('feedback');
+          feedback.innerHTML = '';
+
+          // Создаем элемент img и устанавливаем необходимые атрибуты
+          var feedbackImage = document.createElement('img');
+          feedbackImage.id = 'feedback-image';
+          feedbackImage.src = './jpg/vlad.png';
+          feedbackImage.alt = 'Feedback Image';
+          feedbackImage.style.width = '40%'; // Задайте размер изображения по вашему желанию
+
+          // Добавляем изображение в feedback
+          feedback.appendChild(feedbackImage);
+
+          // Показываем изображение
+          feedbackImage.classList.remove('hidden');
           playSound('incorrectSound');
 
           // Скрываем кнопку при неверном ответе
@@ -138,13 +156,11 @@
         window.open(randomCartoon, '_blank');
       }
     </script>
-    <audio id="correctSound">
-      <source src="correct.mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
-    </audio>
+
     <audio id="incorrectSound">
       <source src="zvuk-neudachi2.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
+    <script src="./index.js"></script>
   </body>
 </html>
