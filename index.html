@@ -4,101 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Математические Задачи</title>
-
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-        text-align: center;
-        margin: 20px;
-      }
-
-      h1 {
-        color: #007bff;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 5px;
-        color: #555;
-      }
-
-      select,
-      input,
-      button {
-        margin-bottom: 10px;
-        padding: 8px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      button {
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      button:hover {
-        background-color: #0056b3;
-      }
-
-      #problem-container {
-        display: none;
-        margin-top: 20px;
-      }
-
-      h2 {
-        color: #007bff;
-      }
-
-      #feedback {
-        color: #dc3545;
-        font-weight: bold;
-      }
-
-      #watchCartoonBtn {
-        display: none;
-      }
-      #problem {
-            font-size: 300%; /* Увеличиваем размер шрифта на 200% */
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Выберите Математическую Операцию</h1>
-    <label for="operation">Выберите операцию:</label>
-    <select id="operation">
-      <option value="multiplication">Умножение</option>
-      <option value="division">Деление</option>
-      <option value="addition">Сложение</option>
-      <option value="subtraction">Вычитание</option>
-    </select>
-    <br />
-    <label for="digits">Выберите Количество Знаков:</label>
-    <select id="digits">
-      <option value="1">Один Знак</option>
-      <option value="2">Два Знака</option>
-    </select>
-    <br />
-    <button onclick="startProblem()">Начать</button>
- 
-
-    <div id="problem-container">
-      <h2>Решите Математическую Задачу</h2>
-      <p id="problem"></p>
-      <label for="answer">Ваш ответ:</label>
-      <input type="number" id="answer" />
+    <div class="block-all">
+      <h1>Выберите Математическую Операцию</h1>
+      <label for="operation">Выберите операцию:</label>
+      <select id="operation">
+        <option value="multiplication">Умножение</option>
+        <option value="division">Деление</option>
+        <option value="addition">Сложение</option>
+        <option value="subtraction">Вычитание</option>
+      </select>
       <br />
-      <button onclick="checkAnswer()">Проверить ответ</button>
-    </br></br></br></br>
-    <button onclick="showAnswer()">Показать Правильный Ответ</button>
-      <p id="feedback"></p>
-      <button id="watchCartoonBtn" onclick="watchRandomCartoon()">
-        Смотреть случайный мультфильм
-      </button>
+      <label for="digits">Выберите Количество Знаков:</label>
+      <select id="digits">
+        <option value="1">Один Знак</option>
+        <option value="2">Два Знака</option>
+      </select>
+      <br />
+      <button onclick="startProblem()">Начать</button>
+
+      <div id="problem-container">
+        <h2>Решите Математическую Задачу</h2>
+        <p id="problem"></p>
+        <label for="answer">Ваш ответ:</label>
+        <input type="number" id="answer" />
+        <br />
+        <button onclick="checkAnswer()">Проверить ответ</button>
+        <br />
+        <br />
+        <button onclick="showAnswer()">Показать Правильный Ответ</button>
+        <p id="feedback"></p>
+        <button id="watchCartoonBtn" onclick="watchRandomCartoon()">
+          Смотреть случайный мультфильм
+        </button>
+      </div>
     </div>
 
     <script>

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'AvengeanceMightiestAvenger';
+  src: url('fonts/AVENGEANCE_MIGHTIEST_AVENGER_RUS_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WooshComic';
+  src: url('fonts/woosh-comic.ttf') format('truetype');
+}
+
+body {
+  font-family: 'AvengeanceMightiestAvenger', sans-serif;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: #333;
+  text-align: center;
+  margin: 20px;
+  background-image: url(./jpg/background.jpg);
+}
+/* @media screen and (max-width: 479px) {
+  .block-all {
+    width: 380px;
+  }
+} */
+@media screen and (min-width: 480px) {
+  .block-all {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .block-all {
+    width: 800px;
+  }
+}
+.block-all {
+  background-color: #1f1e1ec7;
+  padding: 30px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+h1 {
+  color: #00ff88;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+select,
+input,
+button {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#problem-container {
+  display: none;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #eeff00;
+}
+
+#feedback {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+#watchCartoonBtn {
+  display: none;
+}
+#problem {
+  font-size: 300%;
+  font-family: 'WooshComic', sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+/*  */
