@@ -2,11 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Ждем 4 секунды (4000 миллисекунд) и показываем блок
   setTimeout(function () {
     var optimusBlock = document.getElementById('optimus');
-    optimusBlock.style.display = 'none'; // или используйте другое значение, такое как "flex" или "inline-block" в зависимости от ваших потребностей
+    optimusBlock.style.display = 'none';
   }, 4000);
 });
 // nnnnnnnnnnnn
 var correctAnswer;
+
+var correctAnswer;
+var correctCounter = 0;
 
 function startProblem() {
   var operation = document.getElementById('operation').value;
@@ -30,6 +33,9 @@ function startProblem() {
   } else if (digits === '2') {
     num1 = Math.floor(Math.random() * 90) + 10;
     num2 = Math.floor(Math.random() * 90) + 10;
+  } else {
+    num1 = Math.floor(Math.random() * 90) + 10;
+    num2 = Math.floor(Math.random() * 9) + 1;
   }
 
   // Для вычитания выбираем числа, чтобы результат не был отрицательным
@@ -42,7 +48,7 @@ function startProblem() {
   if (operation === 'division') {
     num1 = Math.floor(Math.random() * 9) + 1;
     num2 = Math.floor(Math.random() * 9) + 1;
-    num1 = num1 * num2; // Умножаем, чтобы получить число, которое делится на num2 без остатка
+    num1 = num1 * num2;
   }
 
   correctAnswer = eval(num1 + ' ' + operator + ' ' + num2);
@@ -85,7 +91,12 @@ function checkAnswer() {
     feedbackImage.id = 'feedback-image';
     feedbackImage.src = './jpg/vlad.webp';
     feedbackImage.alt = 'Feedback Image';
-    feedbackImage.style.width = '40%'; // Задайте размер изображения по вашему желанию
+    feedbackImage.style.width = '80%';
+
+    setTimeout(function () {
+      var optimusBlock = document.getElementById('feedback-image');
+      optimusBlock.style.display = 'none'; // или используйте другое значение,
+    }, 4000);
 
     // Добавляем изображение в feedback
     feedback.appendChild(feedbackImage);
@@ -108,6 +119,7 @@ function watchRandomCartoon() {
     'https://www.youtube.com/@TOBOT_Russia',
     'https://www.youtube.com/@CarsRobotsTransformers',
     'https://www.youtube.com/@TransformersRussian',
+    'https://www.youtube.com/@user-pq3kn5le8s',
   ];
 
   var randomIndex = Math.floor(Math.random() * cartoons.length);

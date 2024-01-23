@@ -37,6 +37,7 @@ body {
 }
 
 /*  */
+
 @media screen and (max-width: 479px) {
   .optimus-img {
     margin-top: 50px;
@@ -52,6 +53,7 @@ body {
     height: 70%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .block-all {
     width: 800px;
@@ -119,7 +121,7 @@ h2 {
 #feedback-image {
   position: absolute;
   bottom: 0;
-  left: 25%;
+  left: 5%;
   /* width: 600px; */
 }
 #watchCartoonBtn {
