@@ -1,3 +1,4 @@
+let answer = 0;
 document.addEventListener('DOMContentLoaded', function () {
   // Ждем 4 секунды (4000 миллисекунд) и показываем блок
   setTimeout(function () {
@@ -77,10 +78,13 @@ function checkAnswer() {
 
   if (userAnswer == correctAnswer) {
     feedback.innerText = 'Правильно!';
-    playSound('correctSound');
-
-    // Показываем кнопку "Смотреть случайный мультфильм" при правильном ответе
-    document.getElementById('watchCartoonBtn').style.display = 'block';
+    answer += 1;
+    if (answer === 5) {
+      // Показываем кнопку "Смотреть случайный мультфильм" при правильном ответе
+      document.getElementById('watchCartoonBtn').style.display = 'block';
+      answer = 0;
+    }
+    // playSound('correctSound');
   } else {
     // Очищаем содержимое feedback перед добавлением изображения
     var feedback = document.getElementById('feedback');
@@ -111,6 +115,7 @@ function checkAnswer() {
 }
 
 function watchRandomCartoon() {
+  answer = 0;
   var cartoons = [
     'https://www.youtube.com/@crazy_paleontologist',
     'https://www.youtube.com/@BoysandToys',
