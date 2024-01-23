@@ -1,11 +1,76 @@
+const ip1 = '46.150.10.154';
+// Создаем новый объект XMLHttpRequest
+var xhr = new XMLHttpRequest();
+let ipAddress;
+// Указываем URL сервиса, который предоставляет информацию об IP
+var url = 'https://api64.ipify.org?format=json';
+
+// Настраиваем запрос
+xhr.open('GET', url, true);
+
+// Определяем обработчик события, который будет вызван при успешном завершении запроса
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    // Распарсиваем JSON-ответ
+    var response = JSON.parse(xhr.responseText);
+
+    // Получаем IP-адрес из ответа
+    ipAddress = response.ip;
+    if (response.ip === ip1) {
+      console.log('hello');
+    }
+    // Выводим IP-адрес в консоль
+  } else {
+    console.error('Произошла ошибка при запросе IP-адреса:', xhr.statusText);
+  }
+};
+
+// Определяем обработчик события, который будет вызван при ошибке запроса
+xhr.onerror = function () {
+  console.error('Произошла сетевая ошибка при запросе IP-адреса.');
+};
+
+// Отправляем запрос
+xhr.send();
+// .........................................................
 let answer = 0;
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Ждем 4 секунды (4000 миллисекунд) и показываем блок
+//   setTimeout(function () {
+//     if (ipAddress === ip1) {
+//       var optimusBlock = document.getElementById('optimus1');
+//       optimusBlock.style.display = 'block';
+//     } else {
+//       var optimusBlock = document.getElementById('optimus');
+//       optimusBlock.style.display = 'block';
+//     }
+//   }, 4000);
+// });
 document.addEventListener('DOMContentLoaded', function () {
-  // Ждем 4 секунды (4000 миллисекунд) и показываем блок
-  setTimeout(function () {
-    var optimusBlock = document.getElementById('optimus');
-    optimusBlock.style.display = 'none';
-  }, 4000);
+  // Получаем ссылки на элементы
+  var optimus1 = document.getElementById('optimus1');
+  var optimus2 = document.getElementById('optimus2');
+
+  // Ваше условие, например:
+  // var condition = true;
+
+  // Показываем нужную картинку на 4 секунды в зависимости от условия
+  if (ipAddress === ip1) {
+    showImage(optimus2);
+  } else {
+    showImage(optimus1);
+  }
 });
+
+function showImage(element) {
+  // Показываем элемент
+  element.style.display = 'block';
+
+  // Спрячем элемент через 4 секунды
+  setTimeout(function () {
+    element.style.display = 'none';
+  }, 4000);
+}
 // nnnnnnnnnnnn
 var correctAnswer;
 
