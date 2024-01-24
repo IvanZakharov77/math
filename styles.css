@@ -27,14 +27,13 @@ body {
   background-image: url(./jpg/background.webp);
 }
 .first_block {
-  margin-top: -50px;
+  padding-top: 250px;
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: url(./jpg/back.webp);
 }
 .start {
-  margin-top: 300px;
   padding: 15px;
   background-color: #4d0909;
   text-align: center;
@@ -46,8 +45,8 @@ body {
 .optimus {
   width: 100%;
   height: 100%;
-  margin-top: -50px;
-  background-color: #000000;
+  background-image: url(./jpg/helloback.webp);
+  /* background-color: #000000; */
   position: absolute;
   z-index: 1;
   display: none;
@@ -55,7 +54,6 @@ body {
 .optimus1 {
   width: 100%;
   height: 100%;
-  margin-top: -50px;
   background-color: #000000;
   position: absolute;
   z-index: 1;
@@ -65,11 +63,11 @@ body {
 
 @media screen and (max-width: 479px) {
   .optimus-img {
-    margin-top: 50px;
+    padding-top: 50px;
     height: 50%;
   }
   .optimus-img1 {
-    margin-top: 50px;
+    padding-top: 50px;
     height: 50%;
   }
 }
@@ -78,11 +76,11 @@ body {
     width: 400px;
   }
   .optimus-img {
-    margin-top: 50px;
+    padding-top: 50px;
     height: 70%;
   }
   .optimus-img1 {
-    margin-top: 50px;
+    padding-top: 50px;
     height: 70%;
   }
 }
@@ -103,7 +101,7 @@ body {
 .block-all {
   background-color: #1f1e1ec7;
   padding: 30px;
-  margin-top: 50px;
+  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
@@ -171,10 +169,16 @@ h2 {
   position: absolute;
   bottom: 0;
   left: 5%;
-  /* width: 600px; */
 }
 #watchCartoonBtn {
   display: none;
+}
+.surpriz {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff0800;
+  text-align: center;
+  padding: 25px;
 }
 #problem {
   font-size: 300%;

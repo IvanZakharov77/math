@@ -46,7 +46,7 @@
         <option value="3">Однозначные и двузначные</option>
       </select>
       <br />
-      <button onclick="startProblem()">Начать</button>
+      <button id="btn_start" onclick="startProblem()">Начать</button>
 
       <div id="problem-container">
         <h2>Решите Математическую Задачу</h2>
@@ -59,7 +59,9 @@
         <br />
         <button onclick="showAnswer()">Показать Правильный Ответ</button>
         <div id="feedback"></div>
-        <button id="watchCartoonBtn" onclick="watchRandomCartoon()">Держи приз!!!</button>
+        <button class="surpriz" id="watchCartoonBtn" onclick="watchRandomCartoon()">
+          Держи приз!!!
+        </button>
       </div>
     </div>
 

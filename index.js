@@ -36,33 +36,6 @@ xhr.send();
 // .........................................................
 let answer = 0;
 
-// function playSound1(soundId) {
-//   var audio = document.getElementById(soundId);
-//   audio.play();
-// }
-// document.addEventListener('DOMContentLoaded', function () {
-//   // Получаем ссылки на элементы
-//   var optimus1 = document.getElementById('optimus1');
-//   var optimus2 = document.getElementById('optimus2');
-
-//   // Показываем нужную картинку на 4 секунды в зависимости от условия
-//   if (ipAddress === ip1) {
-//     showImage(optimus2);
-//   } else {
-//     playSound1('hello_nikita');
-//     showImage(optimus1);
-//   }
-// });
-
-// function showImage(element) {
-//   // Показываем элемент
-//   element.style.display = 'block';
-
-//   // Спрячем элемент через 4 секунды
-//   setTimeout(function () {
-//     element.style.display = 'none';
-//   }, 4500);
-// }
 function startGame() {
   var firstBlock = document.querySelector('.first_block');
   var optimus1 = document.getElementById('optimus1');
@@ -148,7 +121,11 @@ function startProblem() {
   // Сбрасываем видимость кнопки при новой задаче
   document.getElementById('watchCartoonBtn').style.display = 'none';
 }
-
+// кнопка начать или дальше
+const btnStart = document.getElementById('btn_start');
+btnStart.addEventListener('click', function () {
+  btnStart.innerHTML = 'Следующий';
+});
 function showAnswer() {
   alert('Правильный ответ: ' + correctAnswer);
 }
@@ -164,6 +141,7 @@ function checkAnswer() {
 
   if (userAnswer == correctAnswer) {
     feedback.innerText = 'Правильно!';
+    feedback.style.fontSize = '25px';
     answer += 1;
     if (answer === 5) {
       // Показываем кнопку "Смотреть случайный мультфильм" при правильном ответе
