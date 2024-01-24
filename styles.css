@@ -31,7 +31,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(./jpg/back.jpg);
+  background-image: url(./jpg/back.webp);
 }
 .start {
   margin-top: 150px;
