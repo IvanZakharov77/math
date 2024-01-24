@@ -73,11 +73,11 @@ function startGame() {
   firstBlock.style.display = 'none';
 
   // Воспроизводим аудио
-  audio.play();
 
   // Показываем нужную картинку на 4 секунды в зависимости от условия
   if (ipAddress === ip1) {
     showImage(optimus1);
+    audio.play();
   } else {
     showImage(optimus2);
   }
