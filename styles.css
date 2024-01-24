@@ -26,6 +26,21 @@ body {
   text-align: center;
   background-image: url(./jpg/background.webp);
 }
+.first_block {
+  margin-top: -50px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+.start {
+  margin-top: 150px;
+  padding: 15px;
+  background-color: #333;
+  text-align: center;
+  font-size: 30px;
+  color: #eeff00;
+}
 /*  */
 .optimus {
   width: 100%;

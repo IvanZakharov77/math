@@ -1,4 +1,5 @@
-const ip1 = '46.150.10.154';
+// const ip1 = '46.150.10.154';
+const ip1 = '2a02:908:d11:3520::cccb';
 // Создаем новый объект XMLHttpRequest
 var xhr = new XMLHttpRequest();
 let ipAddress;
@@ -34,33 +35,53 @@ xhr.onerror = function () {
 xhr.send();
 // .........................................................
 let answer = 0;
+
+// function playSound1(soundId) {
+//   var audio = document.getElementById(soundId);
+//   audio.play();
+// }
 // document.addEventListener('DOMContentLoaded', function () {
-//   // Ждем 4 секунды (4000 миллисекунд) и показываем блок
-//   setTimeout(function () {
-//     if (ipAddress === ip1) {
-//       var optimusBlock = document.getElementById('optimus1');
-//       optimusBlock.style.display = 'block';
-//     } else {
-//       var optimusBlock = document.getElementById('optimus');
-//       optimusBlock.style.display = 'block';
-//     }
-//   }, 4000);
+//   // Получаем ссылки на элементы
+//   var optimus1 = document.getElementById('optimus1');
+//   var optimus2 = document.getElementById('optimus2');
+
+//   // Показываем нужную картинку на 4 секунды в зависимости от условия
+//   if (ipAddress === ip1) {
+//     showImage(optimus2);
+//   } else {
+//     playSound1('hello_nikita');
+//     showImage(optimus1);
+//   }
 // });
-document.addEventListener('DOMContentLoaded', function () {
-  // Получаем ссылки на элементы
+
+// function showImage(element) {
+//   // Показываем элемент
+//   element.style.display = 'block';
+
+//   // Спрячем элемент через 4 секунды
+//   setTimeout(function () {
+//     element.style.display = 'none';
+//   }, 4500);
+// }
+function startGame() {
+  var firstBlock = document.querySelector('.first_block');
   var optimus1 = document.getElementById('optimus1');
   var optimus2 = document.getElementById('optimus2');
+  var audio = document.getElementById('hello_nikita');
+  var audioL = document.getElementById('hello_leo');
+  // Скрываем первый блок
+  firstBlock.style.display = 'none';
 
-  // Ваше условие, например:
-  // var condition = true;
+  // Воспроизводим аудио
+  audio.play();
 
   // Показываем нужную картинку на 4 секунды в зависимости от условия
   if (ipAddress === ip1) {
-    showImage(optimus2);
-  } else {
     showImage(optimus1);
+  } else {
+    showImage(optimus2);
   }
-});
+}
 
 function showImage(element) {
   // Показываем элемент
