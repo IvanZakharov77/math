@@ -2,6 +2,7 @@ const ip3 = '46.150.10.154';
 const ip1 = '2a02:908:d11:3520::cccb';
 const ip2 = '31.202.123.78';
 const ip4 = '88.154.56.58';
+const ip5 = '2001:9e8:597e:9c00:713a:c5c7:159c:e826';
 // Создаем новый объект XMLHttpRequest
 var xhr = new XMLHttpRequest();
 let ipAddress;
@@ -57,6 +58,9 @@ function startGame() {
     showImage(optimus1);
     audioL.play();
   } else if (ipAddress === ip4) {
+    showImage(optimus1);
+    audioL.play();
+  } else if (ipAddress === ip5) {
     showImage(optimus1);
     audioL.play();
   } else {
