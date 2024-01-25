@@ -1,5 +1,6 @@
-// const ip1 = '46.150.10.154';
+const ip3 = '46.150.10.154';
 const ip1 = '2a02:908:d11:3520::cccb';
+const ip2 = '31.202.123.78';
 // Создаем новый объект XMLHttpRequest
 var xhr = new XMLHttpRequest();
 let ipAddress;
@@ -51,6 +52,9 @@ function startGame() {
   if (ipAddress === ip1) {
     showImage(optimus1);
     audio.play();
+  } else if (ipAddress === ip2) {
+    showImage(optimus1);
+    audioL.play();
   } else {
     showImage(optimus2);
   }
