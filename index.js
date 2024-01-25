@@ -201,6 +201,7 @@ function watchRandomCartoon() {
     'https://www.youtube.com/@CarsRobotsTransformers',
     'https://www.youtube.com/@TransformersRussian',
     'https://www.youtube.com/@user-pq3kn5le8s',
+    'https://www.youtube.com/@PetyaIVolk',
   ];
 
   var randomIndex = Math.floor(Math.random() * cartoons.length);
